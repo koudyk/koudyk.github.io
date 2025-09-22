@@ -3,7 +3,7 @@ title: Why your cat doesn't know its name
 published: 2025-09-21
 description: ''
 image: 'thistle-on-shoulders-at-desk.png'
-tags: [LIBR509-coursework, cat, Thistle,]
+tags: [LIBR509-organizing-whatnot, cat, Thistle,]
 category: 'Library'
 draft: false 
 lang: ''
