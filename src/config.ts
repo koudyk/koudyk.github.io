@@ -55,7 +55,7 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/bird_on_head_sideways.jpeg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	name: "Kendra Oudyk, PhD (she/her)",
-	bio: "Wonder seeker. Amateur baker. Open Science. Meta Research. Future academic librarian? Cats are nice.",
+	bio: "Wonder seeker. Erratic baker (but consistent consumer). Future academic librarian? Open Science. Meta Research. Cats are nice.",
 	links: [
 		// {
 		// 	name: "Twitter",
