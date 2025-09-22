@@ -1,6 +1,6 @@
 ---
-title: 2025-09-21_hello-world
-published: 2025-09-21
+title: Hello world
+published: 2025-09-20
 description: ''
 image: 'bird_on_head.jpeg'
 tags: []
