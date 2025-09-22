@@ -4,7 +4,7 @@ published: 2025-09-20
 description: ''
 image: 'bird_on_head.jpeg'
 tags: []
-category: 'General'
+category: ''
 draft: false 
 lang: ''
 ---
