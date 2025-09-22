@@ -19,4 +19,4 @@ This kind of system is supposed to be precise enough than different people would
 
 Anywho, please enjoy my **graphic-table-figure of my faceted classification system for cat nicknames**. I hope it reveals why Thistle doesn't know his name. Bonus points if you figure out which name we started using after I made this system.
 
-![](https://github.com/koudyk/koudyk.github.io/blob/main/src/content/posts/2025-09-21b_cat-classification/classification-scheme-figure-for-blog.png)
+![](https://raw.githubusercontent.com/koudyk/koudyk.github.io/refs/heads/main/src/content/posts/2025-09-21b_cat-classification/classification-scheme-figure-for-blog.png)
