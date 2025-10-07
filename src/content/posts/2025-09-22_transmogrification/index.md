@@ -3,7 +3,7 @@ title: Transmogrification progress update
 published: 2025-09-22
 description: 'From scientist to information professional; there and maybe back again.'
 image: 'custom-transmogrifier.png'
-tags: [LIBR509-organizing-whatnot, LIBR506-humans-using-info, Thistle, Science]
+tags: [Organizing things well (LIBR509), Humans using info (LIBR506), Thistle the cat, Science]
 category: 'Library School'
 draft: false 
 lang: ''
