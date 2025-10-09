@@ -12,12 +12,12 @@ export const siteConfig: SiteConfig = {
 	subtitle: "Personal website",
 	lang: "en", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	themeColor: {
-		hue: 10, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
+		hue: 20, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
 		fixed: false, // Hide the theme color picker for visitors
 	},
 	banner: {
-		enable: false,
-		src: "assets/images/escher-like-boxes-banner.jpeg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+		enable: true,
+		src: "assets/images/brain-tiles.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 		// position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
 		credit: {
 			enable: false, // Display the credit text of the banner image
@@ -53,9 +53,9 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/bird_on_head_sideways.jpeg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+	avatar: "assets/images/selfie-with-cat_like-screen-print_match-brains_white-background.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	name: "Kendra Oudyk, PhD (she/her)",
-	bio: "Wonder seeker. Erratic baker (but consistent consumer). Future academic librarian? Open Science. Meta Research. Cats are nice.",
+	bio: "Neuroscientist. Future academic librarian? Open Science. Meta Research. Erratic baker (but consistent consumer). Cats are nice.",
 	links: [
 		// {
 		// 	name: "Twitter",
