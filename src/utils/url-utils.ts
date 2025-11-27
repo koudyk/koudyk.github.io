@@ -21,6 +21,11 @@ export function getTagUrl(tag: string): string {
 	return url(`/archive/?tag=${encodeURIComponent(tag.trim())}`);
 }
 
+export function getSkillUrl(skill: string): string {
+	if (!skill) return url("/archive/");
+	return url(`/archive/?skill=${encodeURIComponent(skill.trim())}`);
+}
+
 export function getCategoryUrl(category: string | null): string {
 	if (
 		!category ||

@@ -6,11 +6,13 @@ import { i18n } from "../i18n/translation";
 import { getPostUrlBySlug } from "../utils/url-utils";
 
 export let tags: string[];
+export let skills: string[];
 export let categories: string[];
 export let sortedPosts: Post[] = [];
 
 const params = new URLSearchParams(window.location.search);
 tags = params.has("tag") ? params.getAll("tag") : [];
+skills = params.has("skill") ? params.getAll("skill") : [];
 categories = params.has("category") ? params.getAll("category") : [];
 const uncategorized = params.get("uncategorized");
 
@@ -19,6 +21,7 @@ interface Post {
 	data: {
 		title: string;
 		tags: string[];
+        skills: string[];
 		category?: string;
 		published: Date;
 	};
@@ -41,6 +44,10 @@ function formatTag(tagList: string[]) {
 	return tagList.map((t) => `#${t}`).join(" ");
 }
 
+function formatSkill(skillList: string[]) {
+	return skillList.map((t) => `#${t}`).join(" ");
+}
+
 onMount(async () => {
 	let filteredPosts: Post[] = sortedPosts;
 
@@ -49,6 +56,14 @@ onMount(async () => {
 			(post) =>
 				Array.isArray(post.data.tags) &&
 				post.data.tags.some((tag) => tags.includes(tag)),
+		);
+	}
+
+    if (skills.length > 0) {
+		filteredPosts = filteredPosts.filter(
+			(post) =>
+				Array.isArray(post.data.skills) &&
+				post.data.skills.some((skill) => skills.includes(skill)),
 		);
 	}
 
@@ -142,6 +157,14 @@ onMount(async () => {
                      whitespace-nowrap overflow-ellipsis overflow-hidden text-30"
                         >
                             {formatTag(post.data.tags)}
+                        </div>
+
+                        <!-- skill list -->
+                        <div
+                                class="hidden md:block md:w-[15%] text-left text-sm transition
+                     whitespace-nowrap overflow-ellipsis overflow-hidden text-30"
+                        >
+                            {formatSkill(post.data.skills)}
                         </div>
                     </div>
                 </a>

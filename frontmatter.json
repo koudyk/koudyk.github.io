@@ -47,6 +47,11 @@
           "type": "list"
         },
         {
+          "title": "skills",
+          "name": "skills",
+          "type": "list"
+        },
+        {
           "title": "category",
           "name": "category",
           "type": "string"

@@ -72,6 +72,32 @@ export async function getTagList(): Promise<Tag[]> {
 	return keys.map((key) => ({ name: key, count: countMap[key] }));
 }
 
+export type Skill = {
+	name: string;
+	count: number;
+};
+
+export async function getSkillList(): Promise<Skill[]> {
+	const allBlogPosts = await getCollection<"posts">("posts", ({ data }) => {
+		return import.meta.env.PROD ? data.draft !== true : true;
+	});
+
+	const countMap: { [key: string]: number } = {};
+	allBlogPosts.forEach((post: { data: { skills: string[] } }) => {
+		post.data.skills.forEach((skill: string) => {
+			if (!countMap[skill]) countMap[skill] = 0;
+			countMap[skill]++;
+		});
+	});
+
+	// sort skills
+	const keys: string[] = Object.keys(countMap).sort((a, b) => {
+		return a.toLowerCase().localeCompare(b.toLowerCase());
+	});
+
+	return keys.map((key) => ({ name: key, count: countMap[key] }));
+}
+
 export type Category = {
 	name: string;
 	count: number;
