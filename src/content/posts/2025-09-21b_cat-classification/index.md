@@ -1,12 +1,13 @@
 ---
 title: Why your cat doesn't know its name
 published: 2025-09-21
-description: 'And other reflections on making a faceted classification system'
-image: 'thistle-on-shoulders-at-desk.png'
-tags: [Organizing things well (LIBR509), Thistle the cat,]
-category: 'Library School'
+description: And other reflections on making a faceted classification system
+image: thistle-on-shoulders-at-desk.png
+tags: [Faceted classification, ]
+skills: [Information organization, Data visualization]
+category: Organizing well (LIBR509 course)
 draft: false 
-lang: ''
+lang: eng
 ---
 
 ### And other reflections on making a faceted classification system
