@@ -11,7 +11,7 @@ lang: ''
 ---
 
 
-# Creating a thesaurus for Pixar Shorts
+## Creating a thesaurus for Pixar Shorts
 
 In another universe, I am an animator at Pixar.
 I fell in love with the Pixar company, not just through enjoying their films, but mainly through reading a book by one of their founders: "Creativity, Inc." by Edwin Catmull and Amy Wallace.
@@ -56,6 +56,10 @@ We were to include three types of relationships:
     - these relationships are indicated with the predicate pair `USE/UF` (Use / Use For)
     - e.g., the entry `Burger USE Hamburger` (read as "Instead of 'Burger', use the term 'Hamburger'") and its corresponding entry `Hamburger UF Burger` (read as "'Hamburger' should be used for 'Burger'")
 
+Here's a figure I made (based off a more-opaque figure I found in a textbook) that captures where thesauri fit among the various kinds of controlled vocabularies:
+
+![](controlled-vocab-types_highlighting-thesaurus.png)
+
 ### Features of an effective thesaurus
 
 These were the features we were to use to evaluate each other's thesauri:
@@ -75,6 +79,10 @@ These were the features we were to use to evaluate each other's thesauri:
 ![](thesaurus_scope-notes.png)
 
 ![](thesaurus_example-applications.png)
+
+## References
+
+Chatterjee, A. (2017). Controlled Vocabulary (CV). In *Elements of Information Organization and Dissemination* (pp. 151–169). Elsevier. [https://doi.org/10.1016/B978-0-08-102025-8.00011-9](https://doi.org/10.1016/B978-0-08-102025-8.00011-9)
 
 ## Commentary
 
