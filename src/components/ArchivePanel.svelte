@@ -151,21 +151,29 @@ onMount(async () => {
                             {post.data.title}
                         </div>
 
-                        <!-- tag list -->
+                        <!-- category -->
                         <div
+                                class="hidden md:block md:w-[30%] text-left text-sm transition
+                     whitespace-nowrap overflow-ellipsis overflow-hidden text-30"
+                        >
+                            {post.data.category}
+                        </div>
+                        
+                        <!-- tag list -->
+                        <!-- <div
                                 class="hidden md:block md:w-[15%] text-left text-sm transition
                      whitespace-nowrap overflow-ellipsis overflow-hidden text-30"
                         >
                             {formatTag(post.data.tags)}
-                        </div>
+                        </div> -->
 
                         <!-- skill list -->
-                        <div
+                        <!-- <div
                                 class="hidden md:block md:w-[15%] text-left text-sm transition
                      whitespace-nowrap overflow-ellipsis overflow-hidden text-30"
                         >
                             {formatSkill(post.data.skills)}
-                        </div>
+                        </div> -->
                     </div>
                 </a>
             {/each}
