@@ -125,7 +125,7 @@ The controlled vocabularies are linked in the **context** section of the JSON-LD
 These links go to web pages with specifications for more-particular items that can be listed in the Neurobagel JSON-LD file.
 For example, it can include entries from the Neuroimaging Data Model (NIDM) vocabulary, such as this one for "Group Label":
 
-```owl
+```txt
 ###  http://purl.org/nidash/nidm#groupLabel
 
 nidm:groupLabel rdf:type owl:DatatypeProperty ;
