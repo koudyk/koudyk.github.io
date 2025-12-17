@@ -10,17 +10,23 @@ draft: false
 lang: ''
 ---
 
-## Analyzing SNOMED-CT as a controlled vocabulary
+## Analyzing a controlled vocabulary: Systematized Nomenclature of Medicine – Clinical Terms (SNOMED-CT)
 
-<!-- background and purpose in bulletpoints -->
+If you've ever moved between countries or even between provinces/territories in Canada, you'll know how hard it is to transfer your medical records.
+One problem is that not all health authorities are on the same page about electronic health records.
+Even assuming the regions use electronic health records (a big assumption, but bear with me), one region's record system may not be compatible with the other region's system.
+One way that they can be incompatible is their use of terminology.
+Does "Depression" mean the same thing in health records in Canada and Finland, for example?
+One of the goals of **Systematized Nomenclature of Medicine – Clinical Terms (SNOMED-CT)** is to address this problem with a common healthcare vocabulary.
+It is called a **controlled vocabulary** because it contains standard (controlled) terms.
 
 ## The assignment
 
 The goal of this assignment was to describe and analyze a controlled vocabulary used in the real world.
 Rather than outline the minute workings of the vocabulary itself, the idea was to examine its cultural situation in terms of its creation and governance, and to summarize the main weaknesses and strengths of the system.
 
-I chose to focus on the **Systematized Nomenclature of Medicine – Clinical Terms (SNOMED-CT)**.
-I chose this particular **ontology** because it is used by Neurobagel for defining diagnoses.
+I chose to focus on the Systematized Nomenclature of Medicine – Clinical Terms (SNOMED-CT).
+I chose this particular vocabulary because it is used by Neurobagel for defining diagnoses.
 I decided to focus on several aspects of Neurobagel in this course so that I could relate what I was learning to the real world; Neurobagel is developed and maintained by people in the lab where I did my PhD.
 
 Neurobagel is a tool created by my colleagues in my former neuroscience lab. It is “an ecosystem for distributed dataset harmonization and search.” One of its main features is that it allows you to search for individual research subjects across different neuroimaging datasets. For example, below is a screenshot showing how I would use their query tool to search for data from subjects with Parkinson’s disease who are under 51 years old and have had a specific kind of brain scan (T1-Weighted):
