@@ -16,10 +16,10 @@ lang: ''
 
 Here is my rough classification scheme for what I saw as the learning outcomes from the course:
 
-- **At the mechanical level**, we learned about specific types of systems and there are components, and specific instances of systems.
+- **At the mechanical level**, we learned about specific types of systems and their components, and specific instances of systems.
   - E.g., we learned the mechanics of faceted classification systems and thesauri, some specific systems used in the real world.
 - **At a historical level**, we gained a general understanding of how types of systems and particular systems have evolved over time.
-  - E.g., libraries seem to have dominated this field historically, but in the more-recent past, computer-related fields have become more involved or have worked on related topics in a parallel manner.As resources moved online, classification-type descriptions became arguably less important than labels like subject headings.
+  - E.g., libraries seem to have dominated this field historically, but in the more-recent past, computer-related fields have become more involved or have worked on related topics in a parallel manner. As resources moved online, classification-type descriptions became arguably less important than labels like subject headings.
 - **At a conceptual level**, we have come to understand the types of problems that are important in this field.
   - E.g., the vocabulary problem and authority control are important whenever we want to standardize the way people use terms.
 - **At a contextual level**, we have also considered how various systems are situated in user groups (including patrons and catalogers) and institutions, and the biases that can arise from the context in which systems are created and maintained.
@@ -31,12 +31,12 @@ Here is my rough classification scheme for what I saw as the learning outcomes f
 I believe I have mastered all the basic content of this course, and I have gone deeper than the course required into certain areas that I’m interested in.
 
 **When I encountered concepts I didn’t understand** or felt I was lacking a cohesive picture of how things fit together, I did extra research outside the course materials.
-For example, I was having a tough time understanding the distinct types of controlled vocabularies come on wondering why SNOMED-CT an ontology instead of a thesaurus.
+For example, I was having a tough time understanding the distinct types of controlled vocabularies, for example, wondering why SNOMED-CT is an ontology instead of a thesaurus.
 So, I did extra research online and came across a textbook with a helpful chapter about controlled vocabularies (Chatterjee, 2017).
 There was one figure in particular that I found helpful, but I did not feel the figure itself was remarkably effective, so I recreated the figure and used it several times in my portfolio to highlight the differences between types of controlled vocabularies (e.g., in my [post analyzing SNOMED-CT](http://koudyk.github.io/posts/2025-12-05_analyze-controlled-vocabulary_snowmed-ct/#what-is-snomed-ct)).
 
 **I researched some areas of interest in greater depth** than the course required, such as topics around linked data and the semantic web.
-In the end, learning about these topics helped me understand the data format that I analyzed, JSON-LD I added brief explanations of the [Resource Description Framework](http://koudyk.github.io/posts/2025-12-07_analyze-data-format_neurobagel/#foundational-concept-resource-description-framework-rdf) and [linked data](http://koudyk.github.io/posts/2025-12-07_analyze-data-format_neurobagel/#foundational-concept-linked-data) in my post where I analyzed the data format, both so I could remember it later and in the hopes that other people can better understand JSON-LD if they read my post.
+In the end, learning about these topics helped me understand the data format that I analyzed (JSON-LD) I added brief explanations of the [Resource Description Framework](http://koudyk.github.io/posts/2025-12-07_analyze-data-format_neurobagel/#foundational-concept-resource-description-framework-rdf) and [linked data](http://koudyk.github.io/posts/2025-12-07_analyze-data-format_neurobagel/#foundational-concept-linked-data) in my post where I analyzed the data format, both so I could remember it later and in the hopes that other people can better understand JSON-LD if they read my post.
 
 **I intentionally related what I was learning to the real world**.
 For example, I used the [create content schema](http://koudyk.github.io/posts/2025-12-03_create-content-schema_website/) and [create systems integration](http://koudyk.github.io/posts/2025-12-09_create-systems-integration_portfolio/) assignments to develop my website.
@@ -44,8 +44,8 @@ The website also acted as my portfolio, and I was able to implement some of the 
 
 Another way I linked this course to the real world was choosing to focus on Neurobagel for several of my assignments.
 This tool is created by people in my former lab, and I had some basic familiarity with the tool through being an early user tester.
-instead of getting peer reviews for the pieces I wrote about in our own bagel, I asked for feedback from the Neurobagel team.
-Repairing the presentation for that meeting also forced me to think about how to explain concepts I was learning about to people who may have learned about similar concepts in a different way (the Neurobagel team is mostly software developers).
+Instead of getting peer reviews for the pieces I wrote about Neurobagel, I asked for feedback from the Neurobagel team.
+Preparing the presentation for that meeting also forced me to think about how to explain concepts I was learning about to people who may have learned about similar concepts in a different way (the Neurobagel team is mostly software developers).
 I incorporated some of these slides into the blog posts as extra explanations, such as [this slide explaining the basic structure of JSON-LD](https://koudyk.github.io/posts/2025-12-07_analyze-data-format_neurobagel/#background-of-json-ld).
 
 **One area where I feel I could improve** is in my understanding of specific systems in libraries.
@@ -87,7 +87,7 @@ I have two special notes about these figures:
 
 ### How linked data might be used in research articles
 
-As I said in the post where I analyzed the data format JSON-lD, I really had to resist going down a rabbit hole exploring linked data and its implementation in different files and systems.
+As I said in the post where I analyzed the data format JSON-LD, I really had to resist going down a rabbit hole exploring linked data and its implementation in different files and systems.
 I feel like it holds a lot of promise for making information from research communications more useful, and I’m sure that others have thought of this.
 
 One of my biggest frustrations when doing better research on academic journal articles was the fact that I had to use natural language processing and heuristics to get structured information out of papers, when that information could have easily been included in a machine-readable format at the start.
@@ -107,11 +107,11 @@ It is about how, with the internet and the ability to link things directly, we m
 They suggest that it can be more useful to have many freely input tags assigned by users, rather than a handful of subject headings assigned by expert catalogers.
 
 Again, because my PhD work involved doing meta-research on academic journal articles, I wondered how this could be applied to research.
-Of course, most journals require authors to keywords when they submit their articles, and sometimes they are free to enter whatever they like, that is, they don’t need to use a controlled vocabulary.
+Of course, most journals require authors to input keywords when they submit their articles, and sometimes they are free to enter whatever they like, that is, they don’t need to use a controlled vocabulary.
 But I have found that authors almost always supply keywords related to the *subject* of their research, rather than the *methods*, for example.
 Since researchers also almost never mention specific methods in their titles or abstracts, it is very difficult to find a set of papers that use a certain method by using a systematic search string.
 If readers could tag papers with information relevant to them, perhaps eventually we would end up with labels for papers that don't just cover subjects.
-One thing that I want to look into related to this, is whether the Zotero citation management software collects the tags that users give to articles in their collections of papers on their computer.
+One thing that I want to look into related to this is whether the Zotero citation management software collects the tags that users give to articles in their collections of papers on their computer.
 
 ## References
 
