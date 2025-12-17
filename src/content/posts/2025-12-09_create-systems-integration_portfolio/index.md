@@ -60,6 +60,10 @@ The open code behind my website can be found at [https://github.com/koudyk/koudy
 
 ![](finalized_content-schema.png)
 
+The types of information entered (e.g., `Date` vs `string` vs `boolean` vs `list of strings`) is enforced in this file:
+
+![](blog-post-metadata-types.png)
+
 ### Controlled vocabularies
 
 ![](hierarchical-classification-categories.png)
