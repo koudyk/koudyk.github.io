@@ -2,7 +2,7 @@
 title: "Making brains findable"
 published: 2025-12-08
 description: 'Analyzing the systems integration in Neurobagel'
-image: 'brains.png'
+image: 'building_GUI.png'
 tags: [Systems integration, Controlled vocabulary, Data format, Content standard, Neurobagel]
 skills: [Analyzing information systems, Information organization, TSV, JSON, JSON-LD]
 category: Organizing well (LIBR509 course)
@@ -32,6 +32,8 @@ Neurobagel plays an important role in this landscape by facilitating the combini
 For this assignment, we had to pick an existing institution or collection, and analyze the set of systems that it uses to organize resources.
 The goal is to see how the different systems interact.
 
+Note that some parts of this assignment are copied or summarized from previous assignments where I analyzed systems used by Neurobagel.
+
 ## Background
 
 **What is Neurobagel?** Neurobagel is "an ecosystem for distributed dataset harmonization and search” (Neurobagel Homepage, n.d.). One of its main features is that it allows you to search for individual research subjects across different neuroimaging datasets. For example, below is a screenshot showing how I would use their query tool to search for data from subjects with `Parkinson’s disease` who are under `51` years old and have had a specific kind of brain scan (`T1-Weighted`):
@@ -56,6 +58,8 @@ I did my PhD in the ORIGAMI Lab, and while I frequently heard project updates fr
 The software is open-source on GitHub, and they have instructions [here](https://neurobagel.org/contributing/CONTRIBUTING/) for how to contribute through GitHub issues and pull requests.
 
 If someone does not have the time or ability to contribute code to the project, they can also open issues with suggestions or provide feedback via the prompts that pop up as you use their online tools.
+
+*NB: Parts of this section are from the ![previous assignment where I analyzed Neurobagel's content standard](../2025-12-06_analyze-content-standard_neurobagel/index.md).*
 
 ## Neurobagel's integrated systems
 
@@ -105,6 +109,8 @@ bagel pheno \
     --portal "https://www.mydatasetportal.org/dataset1" \ 
     --output "Dataset1.jsonld"
 ```
+
+*NB: Parts of this section are from the ![previous assignment where I analyzed Neurobagel's content standard](../2025-12-06_analyze-content-standard_neurobagel/index.md).*
 
 ### Data formats
 
@@ -162,6 +168,8 @@ Regarding the use of controlled vocabularies, I think that many researchers in t
 Anyone looking to review (formally or informally) research in neuroimaging needs to consider how each study defines the subject matter (e.g., 'working memory') and participant groups (e.g., 'patients' versus 'healthy controls').
 This is especially important in clinical research where you are often observing rather than introducing the categories (usually diagnoses).
 
+*NB: Parts of this section are from the ![previous assignment where I analyzed Neurobagel's content standard](../2025-12-06_analyze-content-standard_neurobagel/index.md).*
+
 ## References
 
 Annotating phenotypic data—Neurobagel. (n.d.). Retrieved December 15, 2025, from [https://neurobagel.org/user_guide/annotation_tool/](https://neurobagel.org/user_guide/annotation_tool/)
@@ -176,7 +184,13 @@ Neurobagel Homepage. (n.d.). Neurobagel. Retrieved December 15, 2025, from [http
 
 ## Commentary
 
-I did not have this assignment ready before I did my presenation to the Neurobagel team.
+This assignment is quite long, partly because it incorporates some of the text in ![previous assignment where I analyzed Neurobagel's content standard](../2025-12-06_analyze-content-standard_neurobagel/index.md).
+I noted this explicitly in each section where I used text from the previous assignment.
+I chose to have this material repeated because I want each post to stand on its own.
+In the future, when I'm done this course and I no longer need one post per assignment, I will probably combine some of the posts.
+For example, I'll probably integrate the 'Analyze - content standard' assignment and this assignment.
+
+I did not have this assignment ready before I did my presentation to the Neurobagel team.
 But I did have an idea of the various systems involved, and we discussed aspects of their Annotation Tool (for data-inputters) and Query tool (for data-consumers).
 Below are the questions I asked them and my summaries of their answers. I integrated some aspects of this discussion to expand the post above beyond the assignment requirements.
 
