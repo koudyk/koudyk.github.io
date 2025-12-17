@@ -16,13 +16,13 @@ I have discovered the deep, deep rabbit hole of linked data and the semantic web
 Needless to say, I have had to resist researching it too much because I could probably do that for a year and not understand everything.
 
 It all started because I wanted to analyze the data formats used by Neurobagel for this assignment: TSV, JSON, and JSON-LD.
-I focused on the latter because that's the format that is actually used to 'catalogue' the human neuroimaging data in the backend of Neurobagel.
+I focused on the latter because that's the format that is actually used to 'catalogue' the human neuroimaging data in the back-end of Neurobagel.
 Essentially, someone uploading their data to Neurobagel goes through these steps:
 
 1. Data-inputter uploads participant-level phenotypic (non-imaging) data in a **TSV**
-2. Data-inputter uploads imaging meta-data in a **JSON**
-3. Data-inputter use the **Neurobagel Annotation Tool** (a Graphical User Interface; GUI) to annotate the phenotypic data by matching the terms used to terms from controlled vocabularies (e.g., [diagnoses in SNOMED-CT](../2025-12-05_analyze-controlled-vocabulary_snowmed-ct/index.md))
-4. Neurobagel in takes all this data and creates a **JSON-LD** file that populates the graph that is the database in its backend.
+2. Data-inputter uploads imaging metadata in a **JSON**
+3. Data-inputter uses the **Neurobagel Annotation Tool** (a Graphical User Interface; GUI) to annotate the phenotypic data by matching the terms used to terms from controlled vocabularies (e.g., [diagnoses in SNOMED-CT](../2025-12-05_analyze-controlled-vocabulary_snowmed-ct/index.md))
+4. Neurobagel intakes all this data and creates a **JSON-LD** file that populates the graph that is the database in its back-end.
 
 Note that I use 'data-inputter' instead of 'user' because there's also another group of 'users' of Neurobagel, the 'data-consumers'.
 
@@ -36,7 +36,7 @@ I expanded this by writing about the foundational concepts of the Resource Descr
 
 ## Foundational concept: Resource Description Framework (RDF)
 
-Resource Description Framework (RDF) is a concept/framework that is supposed to be able to describe anything and any relationship.
+Resource Description Framework (RDF) is a concept for describing anything and any relationship.
 It captures things and relationships in **triples**, where two things are the `subject` and `object`, and the relationship between them is the `predicate`.
 Each thing has a **Uniform Resource Identifier** (URI, often in the form of a URL) that is unique to that thing.
 Here's a slide I made to explain this:
@@ -51,13 +51,13 @@ This is a slide I made to demonstrate what RDF might look like in tabular data, 
 
 ![](rdf-in-tabular-data.png)
 
-Before JSON-LD became the default format for linked data on the web, **RDF/JSON** was created to write RDF triples in native JSON.
+Before JSON-LD became the default format for linked data on the web, **RDF/JSON** was created to write RDF Triples in native JSON.
 This is challenging/interesting because JSON is based off *key-value pairs*. To make a triple, you need to have a key-value pair embedded in another key-value pair.
 Here is the slide I created to explain this:
 
 ![](rdf-in-rdf-json.png)
 
-The website explaining this format explicitly says that it is not recommended, and that JSON-LD should be used instead (RDF 1.1 JSON Alternate Serialization (RDF/JSON), n.d.).
+The website explaining this format explicitly says that it is not recommended, and that JSON-LD should be used instead (*RDF 1.1 JSON Alternate Serialization (RDF/JSON)*, n.d.).
 
 As an introduction to JSON-LD, consider this figure that I found to illustrate how RDF is conceptualized in JSON-LD (Drudge-Willson, 2024):
 
@@ -65,7 +65,7 @@ As an introduction to JSON-LD, consider this figure that I found to illustrate h
 
 In order to allow a machine to understand the statement "Mark van Berkel works for Schema App", we need definitions of things like a "Person" and a "Company" and relationships like "name" and "works for".
 
-The figure has these RDF triples shown in a network graph:
+The figure has these RDF Triples shown in a network graph:
 
 - `Person` (subject) `worksFor` (predicate) `Organization` (object)
 - `Person` (subject) `name` (predicate) `Mark van Berkel` (object)
@@ -95,10 +95,10 @@ The following image from [schemaapp.com](https://www.schemaapp.com/schema-markup
 JSON is essentially a set of key-value pairs, usually used for data.
 The two most important ways that JSON-LD was extended from JSON for linked data are:
 
-1. A **"context"** is added at the top of the file. This is a set of links to definitions for various things (e.g, "Person") and relationships (e.g, "name").
+1. A **"context"** is added at the top of the file. This is a set of links to definitions for various things (e.g., "Person") and relationships (e.g., "name").
 2. A **unique identifier** for each of the things and relationships.
 
-I created the following slide to illustrate this by marking up a screenshot of JSON-LD code from Wikipedia (“JSON-LD,” 2025):
+I created the following slide to illustrate this by marking up a screenshot of JSON-LD code from Wikipedia ("JSON-LD", 2025):
 
 ![](json-ld.png)
 
@@ -113,7 +113,7 @@ I created the following slide to illustrate this by marking up a screenshot of J
 
 - Maintained by the **JSON-LD Working Group**
 - One can join through being part of a ‘Member organization (e.g., Google LLC) or as a ‘Invited Expert’
-- It looks like anyone can contribute to the repo, esp. to their docs
+- It looks like anyone can contribute to the repo, especially to their docs
 
 ## Analysis of JSON-LD
 
@@ -124,28 +124,28 @@ I created the following slide to illustrate this by marking up a screenshot of J
 
 **Obvious issues.** Even though it was meant to be more human-readable than XML, it is more complex than basic JSON and requires some explanation.
 
-**How would you encounter / implement it?** Anyone working on the back-ed of the web would likely encounter JSON-LD.
+**How would you encounter / implement it?** Anyone working on the back-end of the web would likely encounter JSON-LD.
 There is a lot of documentation for using it from W3C, and there are several tools that can be used to validate the files, such as Google's Rich Results Test and the schema.org validator.
 
 In Neurobagel, users do not interact with these files.
 The users inputting their data ('data-inputters') only interact with TSV and JSON files, along with the Graphical User Interface (GUI) of the Neurobagel Annotation Tool that creates the JSON-LD files.
-The users searching for data ('data-consumers') only interact with the Neurobagel Query Tool to find data, and then the downloadable JSON file that contains the meta-data for their search results.
+The users searching for data ('data-consumers') only interact with the Neurobagel Query Tool to find data, and then the downloadable JSON file that contains the metadata for their search results.
 
 ## References
 
-Drudge-Willson, J. (2023, August 17). Guide to the Schema.org Vocabulary. Schema App Solutions. [https://www.schemaapp.com/schema-markup/guide-to-the-schema-org-vocabulary/](https://www.schemaapp.com/schema-markup/guide-to-the-schema-org-vocabulary/)
+Drudge-Willson, J. (2023, August 17). Guide to the Schema.org Vocabulary. *Schema App Solutions*. [https://www.schemaapp.com/schema-markup/guide-to-the-schema-org-vocabulary/](https://www.schemaapp.com/schema-markup/guide-to-the-schema-org-vocabulary/)
 
-Drudge-Willson, J. (2024, February 7). The Anatomy of a Content Knowledge Graph. Schema App Solutions. [https://www.schemaapp.com/schema-markup/the-anatomy-of-a-content-knowledge-graph/](https://www.schemaapp.com/schema-markup/the-anatomy-of-a-content-knowledge-graph/)
+Drudge-Willson, J. (2024, February 7). The Anatomy of a Content Knowledge Graph. *Schema App Solutions*. [https://www.schemaapp.com/schema-markup/the-anatomy-of-a-content-knowledge-graph/](https://www.schemaapp.com/schema-markup/the-anatomy-of-a-content-knowledge-graph/)
 
-JSON-LD. (2025). In Wikipedia. [https://en.wikipedia.org/w/index.php?title=JSON-LD&oldid=1307245463](https://en.wikipedia.org/w/index.php?title=JSON-LD&oldid=1307245463)
+*JSON-LD*. (2025). In *Wikipedia*. [https://en.wikipedia.org/w/index.php?title=JSON-LD&oldid=1307245463](https://en.wikipedia.org/w/index.php?title=JSON-LD&oldid=1307245463)
 
-ManuSporny (Director). (2012, June 18). What is JSON-LD? [Video recording]. [https://www.youtube.com/watch?v=vioCbTo3C-4](https://www.youtube.com/watch?v=vioCbTo3C-4)
+ManuSporny (Director). (2012, June 18). *What is JSON-LD?* [Video recording]. [https://www.youtube.com/watch?v=vioCbTo3C-4](https://www.youtube.com/watch?v=vioCbTo3C-4)
 
-ManuSporny. (2014a, January 19). The Origins of JSON-LD. The Beautiful, Tormented Machine. [https://web.archive.org/web/20220316070711/http://manu.sporny.org/2014/json-ld-origins/](https://web.archive.org/web/20220316070711/http://manu.sporny.org/2014/json-ld-origins/)
+ManuSporny. (2014a, January 19). The Origins of JSON-LD. *The Beautiful, Tormented Machine*. [https://web.archive.org/web/20220316070711/http://manu.sporny.org/2014/json-ld-origins/](https://web.archive.org/web/20220316070711/http://manu.sporny.org/2014/json-ld-origins/)
 
-ManuSporny. (2014b, January 21). JSON-LD and Why I Hate the Semantic Web. The Beautiful, Tormented Machine. [https://web.archive.org/web/20230524052750/http://manu.sporny.org/2014/json-ld-origins-2/](https://web.archive.org/web/20230524052750/http://manu.sporny.org/2014/json-ld-origins-2)
+ManuSporny. (2014b, January 21). JSON-LD and Why I Hate the Semantic Web. T*he Beautiful, Tormented Machine*. [https://web.archive.org/web/20230524052750/http://manu.sporny.org/2014/json-ld-origins-2/](https://web.archive.org/web/20230524052750/http://manu.sporny.org/2014/json-ld-origins-2)
 
-RDF 1.1 JSON Alternate Serialization (RDF/JSON). (n.d.). Retrieved December 11, 2025, from [https://www.w3.org/TR/rdf-json/#overview-of-rdf-json](https://www.w3.org/TR/rdf-json/#overview-of-rdf-json)
+*RDF 1.1 JSON Alternate Serialization (RDF/JSON)*. (n.d.). Retrieved December 11, 2025, from [https://www.w3.org/TR/rdf-json/#overview-of-rdf-json](https://www.w3.org/TR/rdf-json/#overview-of-rdf-json)
 
 ## Commentary
 
@@ -165,13 +165,13 @@ I presented the assignment requirements in this way:
 
 ### Version 2: Adding elements of my discussion with the Neurobagel Team
 
-For this filan version, I wrote out elements of my presentation in a blog format. I also incorporated elements of the discussion I had with the Neurobagel team. Here is a summary of our discussion:
+For this final version, I wrote out elements of my presentation in a blog format. I also incorporated elements of the discussion I had with the Neurobagel team. Here is a summary of our discussion:
 
 - **Why did you choose these formats? e.g., did you consider XML?**
   - They did not even touch XML.
   - They originally thought the JSON-LD file would be an 'ephemeral file', but they didn't end up using it in that way.
   - They used TSV and JSON as the files that the data-inputter would use because those are the formats used for Brain Imaging Data Standard (BIDS), which is the format for that all the data indexed by Neurobagel.
-  - When deciding what to have the data-inputter do versus what to make easier with a graphical user interface, they considered how much complexity should go to the user versus the system.
+  - When deciding what to have the data-inputter do versus what to make easier with a Graphical User Interface (GUI), they considered how much complexity should go to the user versus the system.
     - e.g., they decided they wouldn't support all the tabular formats out there; they require the data-inputter to use TSV.
   - They couldn't find great tooling around creating JSON-LD
     - They built their system off the system from the DANDI data archive for making the JSON-LD context and putting it at the top of the file.

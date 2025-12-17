@@ -12,9 +12,9 @@ lang: eng
 
 ## Creating a faceted classification system for cat names
 
-Thistle does not know his name. He occasionally comes when we make kissing noises (haven't tested if this is a greater-than-chance occurance). But he's so smart! Why doesn't he know his name? Spoiler: it's our fault.
+Thistle does not know his name. He occasionally comes when we make kissing noises (haven't tested if this is a greater-than-chance occurrence). But he's so smart! Why doesn't he know his name? Spoiler: it's our fault.
 
-I'm in a course called *Foundations of Resource Description and Knowledge Organization*. A mouthful. But incredibly fun. You may not believe me if you do not know that I'm the kind of person who, when looking up cozy video games to try, gets excited about the **video game where you get to take stuff out of boxes and put it on shelves**. My favourite job ever was organizing the supply room at an elementary school. Picture this. Paper mahem. Different colours, weights, sizes, all mixed together, everywhere. Agony. But I BROUGHT ORDER TO CHAOS \**MANIACLE LAUGH*\* (silent maniacle laugh, of course; I struggle to laugh out loud, though sometimes I manage to make guinea pig noises when I'm laughing hard... Maybe picture an evil guinea pig laughing). I made categories. I made labels. I realized I made more categories than cubbyholes. I remade the categories and labels. It was blissful. I am drooling and digressing.
+I'm in a course called *Foundations of Resource Description and Knowledge Organization*. A mouthful. But incredibly fun. You may not believe me if you do not know that I'm the kind of person who, when looking up cozy video games to try, gets excited about the **video game where you get to take stuff out of boxes and put it on shelves**. My favorite job ever was organizing the supply room at an elementary school. Picture this. Paper mayhem. Different colors, weights, sizes, all mixed together, everywhere. Agony. But I BROUGHT ORDER TO CHAOS \**MANIACAL LAUGH*\* (silent maniacal laugh, of course; I struggle to laugh out loud, though sometimes I manage to make guinea pig noises when I'm laughing hard... Maybe picture an evil guinea pig laughing). I made categories. I made labels. I realized I made more categories than cubbyholes. I remade the categories and labels. It was blissful. I am drooling and digressing.
 
 ## The assignment
 
@@ -30,7 +30,7 @@ This kind of system is supposed to be precise enough that different people would
 
 As an extra challenge, I created a data visualization of the scheme.
 As someone who has used text-mining methods in research, I am interested in the problem of how to visualize text data.
-In addition to using the spatial layout / axes (for the "Properness" and "Realness" facets), I used the text properties of font type (for "Poesy") and font size (for "Frequency"), as well as highlight colour (for "Arousal").
+In addition to using the spatial layout / axes (for the "Properness" and "Realness" facets), I used the text properties of font type (for "Poesy") and font size (for "Frequency"), as well as highlight color (for "Arousal").
 
 ![](scheme-visualization_revised.png)
 
@@ -51,7 +51,7 @@ I also included a bespoke data visualization in which I applied the scheme to al
 ### Version 2 (final version above): Addressing fundamental category problems
 
 Personally, I thought the visualization was easier to understand than the list form of the scheme, but my peers found it confusing.
-This could be because the main axes of the figure were "Realness" and "Properness", which were the most-confusing facets in my system.
+This could be because the main axes of the figure were "Realness" and "Properness", which were the most confusing facets in my system.
 
 Originally, these two facets had **fundamental category problems** because they were addressing multiple questions at once.
 Based on a recommendation in the feedback from the instructor, I simplified these categories so each had three options, with

@@ -35,14 +35,13 @@ Neurobagel is a tool created by my colleagues in my former neuroscience lab. It 
 
 ## What is SNOMED-CT
 
-SNOWMED-CT claims to be “the global language of healthcare”. It is a multilingual vocabulary including over 360,000 concepts relevant in healthcare (What Is SNOMED CT, n.d.). The purpose is to have a common set of terminology that makes it easier to create and transfer electronic health records. For example, this kind of common language would be essential if we ever wanted to transfer electronic health records across provinces/territories in Canada (this isn’t really possible at the moment).
+SNOMED-CT claims to be “the global language of healthcare”. It is a multilingual vocabulary including over 360,000 concepts relevant in healthcare (*What Is SNOMED CT*, n.d.). The purpose is to have a common set of terminology that makes it easier to create and transfer electronic health records. For example, this kind of common language would be essential if we ever wanted to transfer electronic health records across provinces/territories in Canada (this isn’t really possible at the moment).
 
 SNOMED-CT is a health **ontology**. An ontology is similar to a thesaurus, but it has custom types of relationships.
 In a thesaurus, the relationships are either generically hierarchical with `BT/NT` (Broad Term / Narrow Term) or generically related with `RT/RT` (Related Terms).
 But in an ontology, a hierarchical relationship might be more specific.
-For example, you might have something like `Left Atrium IS-IN Lungs`, where `IS-IN` specifically means that the former is physically inside the latter
+For example, you might have something like `Left Atrium IS-IN Heart`, where `IS-IN` specifically means that the former is physically inside the latter.
 <!-- (a form of **locative inclusion**). -->
-.
 
 Here is a table I made to help myself understand the differences between the types of controlled vocabularies, based on a (more opaque) figure I found in another textbook:
 
@@ -54,11 +53,11 @@ Here's an illustration of some of the custom relationships in SNOMED-CT:
 
 ## Background of SNOMED-CT
 
-**Origin**. This vocabulary was created by the “International Health Terminology Standards Development Organization” in 2007 (Our Members, n.d.). I cannot tell whether this organization later became “SNOMED International”, or if“SNOMED International” is under the original organization.
+**Origin**. This vocabulary was created by the “International Health Terminology Standards Development Organization” in 2007 (*Our Members*, n.d.). I cannot tell whether this organization later became “SNOMED International”, or if “SNOMED International” is under the original organization.
 
-**Ownership and Governance**. SNOMED International works with a membership model, where Members get access to the vocabulary and contribute by approving the budget and strategy. My understanding is that Members are usually national governments. Originally, there were nine charter Members who founded the organization; these members were Australia, Canada, Denmark, Lithuania, Sweden, the Netherlands, New Zealand, the United Kingdom and the United States. They have since expanded to 50 Members across the world (Our Members, n.d.). I cannot find the specific copyright license of SNOMED-CT, but it is clear that one must pay to use it, whether through a national government paying to be a Member or an individual organization paying to get an Affiliate License.
+**Ownership and Governance**. SNOMED International works with a membership model, where Members get access to the vocabulary and contribute by approving the budget and strategy. My understanding is that Members are usually national governments. Originally, there were nine charter Members who founded the organization; these members were Australia, Canada, Denmark, Lithuania, Sweden, the Netherlands, New Zealand, the United Kingdom and the United States. They have since expanded to 50 Members across the world (*Our Members*, n.d.). I cannot find the specific copyright license of SNOMED-CT, but it is clear that one must pay to use it, whether through a national government paying to be a Member or an individual organization paying to get an Affiliate License.
 
-**Maintenance and Change**. Changes can be requested through the Members’ National Release Centers (NRCs), and the process is specific to each country/territory (Change or Add to SNOMED CT, n.d.). In Canada, the organization Canada Health Infoway has a tool called Request for Change (RFC) that can be used to suggest changes. Suggesting a change is a multi-step process with detailed guidelines that must be followed (SNOMED CT/ SNOMED CT CA - Accelero, n.d.). As far as I can tell, there are no modes of public input; one needs to be a part of a workplace that uses the ontology and has the appropriate license.
+**Maintenance and Change**. Changes can be requested through the Members’ National Release Centers (NRCs), and the process is specific to each country/territory (*Change or Add to SNOMED CT*, n.d.). In Canada, the organization Canada Health Infoway has a tool called Request for Change (RFC) that can be used to suggest changes. Suggesting a change is a multi-step process with detailed guidelines that must be followed (*SNOMED CT/ SNOMED CT CA - Accelero*,n.d.). As far as I can tell, there are no modes of public input; one needs to be a part of a workplace that uses the ontology and has the appropriate license.
 
 ## Analysis of SNOMED-CT
 
@@ -66,7 +65,7 @@ Here's an illustration of some of the custom relationships in SNOMED-CT:
   
   1. Clinical settings (e.g., seamlessly transferring electronic health records when a patient moves);
   2. Public health (e.g., monitoring health issues across populations); and
-  3. Research and evidence-based healthcare (e.g., linking health records to clinical protocols; What Is SNOMED CT, n.d.)
+  3. Research and evidence-based healthcare (e.g., linking health records to clinical protocols; *What Is SNOMED CT*, n.d.)
 
 The main strength of SNOMED-CT is that it is widely-used, customizable, and has many tools built around it.
 For example, the fact that many organizations use it helps it fulfill the goal of facilitating transfer of electronic health records.
@@ -81,7 +80,7 @@ For example, `depression` is considered to be equivalent to `sadness` in the ont
 Additionally, there are important cultural differences that are not reflected in the ontology.
 For example, `use of cigarettes` is considered to be an instance of `substance abuse`.
 
-**How would you encounter / implement it?** In the context of Neurobagel, the research setting is most important. Referring to the example search above, if we want group together the two subjects with Parkinson’s disease from the “PD De Novo” dataset and the 12 subjects with Parkinson’s disease from the “Quebec Parkinson Network” dataset, we need to be confident that “Parkinson’s Disease” means the same thing in those two datasets.
+**How would you encounter / implement it?** In the context of Neurobagel, the research setting is most important. Referring to the example search above, if we want to group together the two subjects with Parkinson’s disease from the “PD De Novo” dataset and the 12 subjects with Parkinson’s disease from the “Quebec Parkinson Network” dataset, we need to be confident that “Parkinson’s Disease” means the same thing in those two datasets.
 
 The Neurobagel team told me that they use SNOMED-CT more like a hierarchical classification system than an ontology.
 To them, it is essentially a hierarchy of authority names for diagnoses.
@@ -93,33 +92,35 @@ Neurobagel offers support for doing this and they have created a system that mak
 
 ## References
 
-Change or add to SNOMED CT. (n.d.). SNOMED International. Retrieved November 23, 2025, from [https://www.snomed.org/change-or-add](https://www.snomed.org/change-or-add)
+*Change or add to SNOMED CT*. (n.d.). SNOMED International. Retrieved November 23, 2025, from [https://www.snomed.org/change-or-add](https://www.snomed.org/change-or-add)
 
-Chatterjee, A. (2017). Controlled Vocabulary (CV). In Elements of Information Organization and Dissemination (pp. 151–169). Elsevier. [https://doi.org/10.1016/B978-0-08-102025-8.00011-9](https://doi.org/10.1016/B978-0-08-102025-8.00011-9)
+Chatterjee, A. (2017). Controlled Vocabulary (CV). *In Elements of Information Organization and Dissemination (pp. 151–169). Elsevier*. [https://doi.org/10.1016/B978-0-08-102025-8.00011-9](https://doi.org/10.1016/B978-0-08-102025-8.00011-9)
 
-Corbucci, L., Monreale, A., Panigutti, C., Natilli, M., Smiraglio, S., & Pedreschi, D. (2023). Semantic Enrichment of Explanations of AI Models for Healthcare (pp. 216–229). [https://doi.org/10.1007/978-3-031-45275-8_15](https://doi.org/10.1007/978-3-031-45275-8_15)
+Corbucci, L., Monreale, A., Panigutti, C., Natilli, M., Smiraglio, S., & Pedreschi, D. (2023). *Semantic Enrichment of Explanations of AI Models for Healthcare* (pp. 216–229). [https://doi.org/10.1007/978-3-031-45275-8_15](https://doi.org/10.1007/978-3-031-45275-8_15)
 
-Our Members. (n.d.). SNOMED International. Retrieved November 23, 2025, from [https://www.snomed.org/members](https://www.snomed.org/members)
+*Our Members*. (n.d.). SNOMED International. Retrieved November 23, 2025, from [https://www.snomed.org/members](https://www.snomed.org/members)
 
-Rossander, A., Lindsköld, L., Ranerup, A., & Karlsson, D. (2021). A State-of-the Art Review of SNOMED CT Terminology Binding and Recommendations for Practice and Research. Methods of Information in Medicine, 60(Suppl 2), e76–e88. [https://doi.org/10.1055/s-0041-1735167](https://doi.org/10.1055/s-0041-1735167)
+Precision and recall. (2025). In *Wikipedia*. [https://en.wikipedia.org/w/index.php?title=Precision_and_recall&oldid=1316777840](https://en.wikipedia.org/w/index.php?title=Precision_and_recall&oldid=1316777840)
 
-SNOMED CT/ SNOMED CT CA - Accelero. (n.d.). Retrieved November 23, 2025, from [https://accelero.infoway-inforoute.ca/en/standards/terminology-standards/snomed-ct-snomed-ct-ca](https://accelero.infoway-inforoute.ca/en/standards/terminology-standards/snomed-ct-snomed-ct-ca)
+Rossander, A., Lindsköld, L., Ranerup, A., & Karlsson, D. (2021). A State-of-the Art Review of SNOMED CT Terminology Binding and Recommendations for Practice and Research. *Methods of Information in Medicine, 60*(Suppl 2), e76–e88. [https://doi.org/10.1055/s-0041-1735167](https://doi.org/10.1055/s-0041-1735167)
 
-What is SNOMED CT. (n.d.). SNOMED International. Retrieved November 23, 2025, from [https://www.snomed.org/what-is-snomed-ct](https://www.snomed.org/what-is-snomed-ct)
+*SNOMED CT/ SNOMED CT CA - Accelero.* (n.d.). Retrieved November 23, 2025, from [https://accelero.infoway-inforoute.ca/en/standards/terminology-standards/snomed-ct-snomed-ct-ca](https://accelero.infoway-inforoute.ca/en/standards/terminology-standards/snomed-ct-snomed-ct-ca)
 
-Why SNOMED isn’t enough for complete clinical documentation | IMO Health. (n.d.). <Https://Www.Imohealth.Com/>. Retrieved December 11, 2025, from [https://www.imohealth.com/resources/why-snomed-isnt-enough-for-complete-clinical-documentation/](https://www.imohealth.com/resources/why-snomed-isnt-enough-for-complete-clinical-documentation/)
+*What is SNOMED CT*. (n.d.). SNOMED International. Retrieved November 23, 2025, from [https://www.snomed.org/what-is-snomed-ct](https://www.snomed.org/what-is-snomed-ct)
+
+*Why SNOMED isn’t enough for complete clinical documentation* (n.d.). IMO Health. Retrieved December 11, 2025, from [https://www.imohealth.com/resources/why-snomed-isnt-enough-for-complete-clinical-documentation/](https://www.imohealth.com/resources/why-snomed-isnt-enough-for-complete-clinical-documentation/)
 
 ## Commentary
 
 <!-- Commentary, as little as two sentences. Can be less polished. Can be candid -->
 
-**Version 1: Focus on assignment requirements**
+### Version 1: Focus on assignment requirements
 
 In my initial draft of this assignment, I included all the required points and only added a brief description at the beginning of what is Neurobagel and the role of this ontology in Neurobagel.
 
-**Version 2: Presentation to the Neurobagel team**
+### Version 2: Presentation to the Neurobagel team
 
-My next version was actually a presentation that I prepared for the Neurobagel team. In that presentation, I briefly went over what our controlled vocabularies and the benefits of controlled vocabularies versus natural language for finding resources. While the Neurobagel team might have understood this difference, other people in my lab were there too, and they don't work with these kinds of problems. Here’s the slide I used to briefly summarize the benefits in terms of **precision** and **recall**. The figure on the left is from Wikipedia, and I created the figure on the right:
+My next version was actually a presentation that I prepared for the Neurobagel team. In that presentation, I briefly went over what our controlled vocabularies and the benefits of controlled vocabularies versus natural language for finding resources. While the Neurobagel team might have understood this difference, other people in my lab were there too, and they don't work with these kinds of problems. Here’s the slide I used to briefly summarize the benefits in terms of **precision** and **recall**. The figure on the left is from Wikipedia (“Precision and Recall,” 2025), and I created the figure on the right:
 
 ![](controlled-vs-natural-vocabs_slide.png)
 
@@ -143,6 +144,6 @@ I used this presentation as a sort of peer review, instead of submitting it for 
   - They had to use another ontology's definition of a "healthy control", since the SNOMED-CT definition didn't fit their use case.
   - They have to remind people that they're annotating with the goal of people finding the data, not finding the perfect term or improving the ontology.
 
-**Version 3: Combining the assignment requirements and my discussion with the Neurobagel Team**
+### Version 3: Combining the assignment requirements and my discussion with the Neurobagel Team
 
 For this final version, I incorporated some explanation of what is an ontology versus a thesaurus, since we didn’t explicitly talk about that in class. I also incorporated some of the points we discussed about during my presentation to the Neurobagel team in the section on "How would you encounter / implement it?".

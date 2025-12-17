@@ -12,7 +12,6 @@ lang: ''
 
 ## Analyzing the systems integration in Neurobagel
 
-<!-- background and purpose in bulletpoints -->
 Before Neurobagel, there were online tools and databases for finding open neuroimaging (brain imaging) datasets.
 A huge development in this space was the creation and widespread adoption of the **Brain Imaging Data Structure (BIDS)**, which is a standardized structure for neuroimaging data including designated file formats, directory structures, and metadata files.
 This made open brain imaging data more FAIR (Findable, Accessible, Interoperable, and Reusable).
@@ -23,7 +22,7 @@ Neurobagel made it possible to search *within* datasets for similar participants
 
 Combining datasets is an important issue in neuroimaging because we generally struggle with having low statistical power.
 In other words, we need *a lot* of data for many questions we want to investigate.
-This is extra challenging in because it is expensive and time-consuming to collect brain imaging data, and it takes sophisticated hardware, software, and expertise to gather, store, and analyze the data.
+This is extra challenging because it is expensive and time-consuming to collect brain imaging data, and it takes sophisticated hardware, software, and expertise to gather, store, and analyze the data.
 Thus, the field as a whole is realizing that we need to distribute the tasks and resources for collecting versus analyzing data so that we can be more efficient and effective overall.
 Neurobagel plays an important role in this landscape by facilitating the combining of existing datasets.
 
@@ -36,7 +35,7 @@ Note that some parts of this assignment are copied or summarized from previous a
 
 ## Background
 
-**What is Neurobagel?** Neurobagel is "an ecosystem for distributed dataset harmonization and search” (Neurobagel Homepage, n.d.). One of its main features is that it allows you to search for individual research subjects across different neuroimaging datasets. For example, below is a screenshot showing how I would use their query tool to search for data from subjects with `Parkinson’s disease` who are under `51` years old and have had a specific kind of brain scan (`T1-Weighted`):
+**What is Neurobagel?** Neurobagel is "an ecosystem for distributed dataset harmonization and search” (*Neurobagel Homepage*, n.d.). One of its main features is that it allows you to search for individual research subjects across different neuroimaging datasets. For example, below is a screenshot showing how I would use their query tool to search for data from subjects with `Parkinson’s disease` who are under `51` years old and have had a specific kind of brain scan (`T1-Weighted`):
 
 ![](screenshot-nb-query-tool-with-pd-search.png)
 
@@ -59,9 +58,13 @@ The software is open-source on GitHub, and they have instructions [here](https:/
 
 If someone does not have the time or ability to contribute code to the project, they can also open issues with suggestions or provide feedback via the prompts that pop up as you use their online tools.
 
-*NB: Parts of this section are from the ![previous assignment where I analyzed Neurobagel's content standard](../2025-12-06_analyze-content-standard_neurobagel/index.md).*
+*NB: Parts of this section are from the previous assignment where I [analyzed Neurobagel's content standard](../2025-12-06_analyze-content-standard_neurobagel/index.md).*
 
 ## Neurobagel's integrated systems
+
+I created this figure for myself to understand how the systems work together in Neurobagel:
+
+![](neurobagel-systems-integration.png)
 
 ### Controlled vocabularies and encoding schemes
 
@@ -71,12 +74,12 @@ Neurobagel makes use of several controlled vocabularies and at least one encodin
 
 These are the controlled vocabularies used and which terms are used in Neurobagel:
 
-- **Systematized Nomenclature of Medicine – Clinical Terms (SNOMED-CT)**, which they used for the definitions of Sex, Diagnoses, and some Assessment Tools. I say 'some' assessment tools becasue they have decided to allow data-inputters to select a term from *any* controlled vocabulary for their assessment tools, since they weren't able to find a single controlled vocabulary that included all (or even most) of the tools used in the field.
+- **Systematized Nomenclature of Medicine – Clinical Terms (SNOMED-CT)**, which they used for the definitions of Sex, Diagnoses, and some Assessment Tools. I say 'some' assessment tools because they have decided to allow data-inputters to select a term from *any* controlled vocabulary for their assessment tools, since they weren't able to find a single controlled vocabulary that included all (or even most) of the tools used in the field.
 - **National Cancer Institute Thesaurus (NCIT)**, which they used for their definition of 'healthy controls', since it was better suited to their use case than the definition in SNOMED-CT (I learned this from talking to the Neurobagel team).
 - **Neuroimaging Data Model (NIDM)**, which they used to define the imaging modalities (e.g., 'T1-weighted' scans from a Magnetic Resonance Imaging (MRI) scanner).
 - **Nipoppy**, which they used to define specific preprocessing pipelines that have already been applied to the available data. Nipoppy is another tool created by the ORIGAMI Lab; it is a framework for standardizing the processing of neuroimaging data.
 
-For the "Age" label, they use the encoding scheme **"European decimal value"**, meaning that decimals should be indicated with commas (as opposed to periods).
+For the "Age" label, they use the encoding scheme **European decimal value**, meaning that decimals should be indicated with commas (as opposed to periods).
 I have not asked them why they do this, but it could be because storing values as strings (e.g., '0,07') in JSON ensures exact data transfer, whereas different conversions may change very small values in floats (e.g., 0.07) depending on the level of numeric precision behind the system (dthorpe, 2016).
 
 ### Content standard
@@ -85,7 +88,7 @@ Neurobagel does not have a content standard in a format like I have seen for bib
 Rather, it has detailed documentation for how to add data to Neurobagel, including how to format the input data in TSV and JSON files.
 They also made a Graphical User Interface (GUI) called the Neurobagel Annotation Tool to help data-inputters label their data with controlled vocabularies without having to interact directly with the complicated JSON-LD files that Neurobagel uses in the back-end.
 
-**Neurobagel Annotation Tool**. These are the basic steps that a data-inputter would undertake to label their data with controlled terminology (Annotating Phenotypic Data - Neurobagel, n.d.):
+**Neurobagel Annotation Tool**. These are the basic steps that a data-inputter would undertake to label their data with controlled terminology (*Annotating Phenotypic Data - Neurobagel*, n.d.):
 
 1. Upload their tabular data in a TSV
 2. Annotate the columns (*predicates* in RDF), including describing the column, selecting the data type (continuous versus categorical), and labelling it with a standardized variable.
@@ -95,11 +98,11 @@ For example, this is what it looks like to annotate the value options in a categ
 
 ![](https://neurobagel.org/imgs/annotate/value_annotation.png)
 
-After this process is completed for all columns, the user can download a **Neurobagel data dictionary** in json format.
+After this process is completed for all columns, the user can download a **Neurobagel data dictionary** in JSON format.
 This file contains the specifications for the annotations.
 
-The next step is to run a command to combine the participant TSV with the data dictionary JSON to create the JSON-LD file that is consumed by Neruobagel.
-This can be accomplished in Python with a specific command that is easy to adapt  (Generating Harmonized Subject-Level Metadata - Neurobagel, n.d.):
+The next step is to run a command to combine the participant TSV with the data dictionary JSON to create the JSON-LD file that is consumed by Neurobagel.
+This can be accomplished in Python with a specific command that is easy to adapt (*Generating Harmonized Subject-Level Metadata - Neurobagel*, n.d.):
 
 ```bash
 bagel pheno \
@@ -110,12 +113,12 @@ bagel pheno \
     --output "Dataset1.jsonld"
 ```
 
-*NB: Parts of this section are from the ![previous assignment where I analyzed Neurobagel's content standard](../2025-12-06_analyze-content-standard_neurobagel/index.md).*
+*NB: Parts of this section are from the previous assignment where I [analyzed Neurobagel's content standard](../2025-12-06_analyze-content-standard_neurobagel/index.md).*
 
 ### Data formats
 
-In the backend, Neurobagel's data is represented in JSON-LD files (explained in [this post on JSON-LD](../2025-12-07_analyze-data-format_neurobagel/index.md)).
-The controlled vocabularies are linked in the **context** section of the JSON-LD files like this (Augmented BIDS Data Dictionaries - Neurobagel, n.d.):
+In the back-end, Neurobagel's data is represented in JSON-LD files (explained in [this post on JSON-LD](../2025-12-07_analyze-data-format_neurobagel/index.md)).
+The controlled vocabularies are linked in the **context** section of the JSON-LD files like this (*Augmented BIDS Data Dictionaries - Neurobagel*, n.d.):
 
 ```json
 {
@@ -156,7 +159,7 @@ As far as I can tell, the only way to browse or explore the data is by submittin
 
 ### From the perspective of Neurobagel 'data-inputters'
 
-While the Neurobagel team has tried to make it easy to annotate data with controlled vocabularies, a data-inputter still needs to know how to work with TSV and JSON files, as well as how to run some basic code in a bash shell (to integrate them into JSON-LD files).
+While the Neurobagel team has tried to make it easy to annotate data with controlled vocabularies, a data-inputter still needs to know how to work with TSV and JSON files, as well as how to run some basic code in a Bash shell (to integrate them into JSON-LD files).
 
 From my perspective, as someone with moderate technical expertise, the process looks straightforward and well-documented.
 However, based on my experience in the neuroimaging field, I know that many researchers will not have the technical expertise to contribute their data to Neurobagel without learning some new skills and perhaps installing unfamiliar software.
@@ -168,46 +171,47 @@ Regarding the use of controlled vocabularies, I think that many researchers in t
 Anyone looking to review (formally or informally) research in neuroimaging needs to consider how each study defines the subject matter (e.g., 'working memory') and participant groups (e.g., 'patients' versus 'healthy controls').
 This is especially important in clinical research where you are often observing rather than introducing the categories (usually diagnoses).
 
-*NB: Parts of this section are from the ![previous assignment where I analyzed Neurobagel's content standard](../2025-12-06_analyze-content-standard_neurobagel/index.md).*
+*NB: Parts of this section are from the previous assignment where I [analyzed Neurobagel's content standard](../2025-12-06_analyze-content-standard_neurobagel/index.md).*
 
 ## References
 
-Annotating phenotypic data—Neurobagel. (n.d.). Retrieved December 15, 2025, from [https://neurobagel.org/user_guide/annotation_tool/](https://neurobagel.org/user_guide/annotation_tool/)
+*Annotating phenotypic data—Neurobagel*. (n.d.). Retrieved December 15, 2025, from [https://neurobagel.org/user_guide/annotation_tool/](https://neurobagel.org/user_guide/annotation_tool/)
 
-Augmented BIDS data dictionaries—Neurobagel. (n.d.). Retrieved December 15, 2025, from [https://neurobagel.org/data_models/dictionaries/](https://neurobagel.org/data_models/dictionaries/)
+*Augmented BIDS data dictionaries—Neurobagel*. (n.d.). Retrieved December 15, 2025, from [https://neurobagel.org/data_models/dictionaries/](https://neurobagel.org/data_models/dictionaries/)
 
-dthorpe. (2016, July 13). Answer to “Why would you use a string in JSON to represent a decimal number” [Online post]. Stack Overflow. [https://stackoverflow.com/a/38357877](https://stackoverflow.com/a/38357877)
+dthorpe. (2016, July 13). Answer to “Why would you use a string in JSON to represent a decimal number” [Online post]. *Stack Overflow*. [https://stackoverflow.com/a/38357877](https://stackoverflow.com/a/38357877)
 
-Generating harmonized subject-level metadata—Neurobagel. (n.d.). Retrieved December 15, 2025, from [https://neurobagel.org/user_guide/cli/](https://neurobagel.org/user_guide/cli/)
+*Generating harmonized subject-level metadata—Neurobagel*. (n.d.). Retrieved December 15, 2025, from [https://neurobagel.org/user_guide/cli/](https://neurobagel.org/user_guide/cli/)
 
-Neurobagel Homepage. (n.d.). Neurobagel. Retrieved December 15, 2025, from [https://neurobagel.org/](https://neurobagel.org/)
+*Neurobagel Homepage*. (n.d.). Neurobagel. Retrieved December 15, 2025, from [https://neurobagel.org/](https://neurobagel.org/)
 
 ## Commentary
 
-This assignment is quite long, partly because it incorporates some of the text in ![previous assignment where I analyzed Neurobagel's content standard](../2025-12-06_analyze-content-standard_neurobagel/index.md).
+This assignment is quite long, partly because it incorporates some of the text in the previous assignment where I [analyzed Neurobagel's content standard](../2025-12-06_analyze-content-standard_neurobagel/index.md).
 I noted this explicitly in each section where I used text from the previous assignment.
 I chose to have this material repeated because I want each post to stand on its own.
 In the future, when I'm done this course and I no longer need one post per assignment, I will probably combine some of the posts.
 For example, I'll probably integrate the 'Analyze - content standard' assignment and this assignment.
 
 I did not have this assignment ready before I did my presentation to the Neurobagel team.
-But I did have an idea of the various systems involved, and we discussed aspects of their Annotation Tool (for data-inputters) and Query tool (for data-consumers).
+But I did have an idea of the various systems involved, and we discussed aspects of their Query Tool (for data-consumers).
 Below are the questions I asked them and my summaries of their answers. I integrated some aspects of this discussion to expand the post above beyond the assignment requirements.
 
-**Why make the Annotation Tool rather than a set of guidelines and code to verify the user-created files?**
-
-- Most of the components behind Neurobagel already existed (e.g., BIDS, JSON-LD, TSV, graphs). The gap that Neurobagel filled was creating the user-friendly tool for neuroimaging researchers to format and link their data appropriately.
-
-**What kinds of issues have come up for people using the Annotation Tool?**
-
-- During user tests, people are almost too polite; they seem hesitant to give critical feedback.
-- They get better feedback from people who actually need to use the system for their work.
-
-**Regarding the Query tool, would you ever want to implement a search system that takes free-text searches?**
+**Regarding the Query Tool, would you ever want to implement a search system that takes free-text searches?**
 
 - Yes, it's a project for next year
 
 **Are there additional systems that you want to integrate? Cognitive Atlas?**
 
-- They have had to expand beyond using SNOMED-CT to define assessments (e.g., diagnostic tests). They have found that there are just oo many assessments out there - they're not captured in any one vocabulary.
+- They have had to expand beyond using SNOMED-CT to define assessments (e.g., diagnostic tests). They have found that there are just so many assessments out there - they're not captured in any one vocabulary.
   - To address this, data-inputters can create their own community vocabularies or select controlled terms from any controlled vocabulary
+
+### Future directions
+
+I could improve my figure showing how the systems work together.
+Ideally it would all fit on one screen, so I may need to re-think the layout.
+I asked the Neurobagel team for feedback on its accuracy, and they said the only thing perhaps missing/misleading is that the Neurobagel Query Tool does not directly query the graph; it goes through an API first. This is an important security level because not all of the data in the graph can be shared openly.
+
+On a related note, I would love to explore how these systems were designed to accommodate the different levels of openness of different datasets.
+Some datasets are available to anyone (who follows their copyright requirements), but some require some sort of permission/authentication to access.
+I think this adds an interesting layer to the design of resource discovery tools.

@@ -12,19 +12,17 @@ lang: ''
 
 ## Creating a content schema for my personal website
 
-<!-- background and purpose in bulletpoints -->
-
 I thought I was being extra efficient by using this assignment to work on my website.
 Two birds with one stone, right?
 
 Well, it would have been more efficient if I had not gone down the rabbit hole of the **Dublin Core Abstract Model** and its implementation in **XML**.
-I didn't end up using either, in the end.
+I didn't end up using either in the end.
 I blame Jeffrey Pomerantz for making these topics too interesting in his book "Metadata" (which I highly recommend).
 
 ## The assignment
 
 For this assignment, we had to create a content schema for any set of resources.
-I chose to do it for the blog posts that I write for this website, since I wanted to think more about its design, anyways.
+I chose to do it for the blog posts that I write for this website, since I wanted to think more about its design, anyway.
 
 Our content schema was supposed to take the form of a table with the following columns:
 
@@ -73,7 +71,7 @@ I have discovered through exploring the code and learning more about JSON-LD tha
 
 So, my intuition (without fully understanding web development) is that I also went against this schema when adding 'skills'.
 
-In the future, I may choose to re-build this website with a template that is more bare-bones, so that I can customize it more easily.
+In the future, I may choose to rebuild this website with a template that is more bare-bones, so that I can customize it more easily.
 
 ### The benefits of creating a schema for myself
 
@@ -82,7 +80,7 @@ After seeing other content schemas for peer-review, I realized that I made my li
 I don't have to worry about *anyone* being able to understand my instructions because they are only for myself.
 Also, I don't have to worry about specifying things like 'how to copy down the title' because the title of the blog posts is generated from the metadata; there is no copying involved. Further, I don't need a name authority file for authors because I am the only author, and that information (along with, e.g., the copyright) is taken from a single place in the code - I don't have to copy it in each time I write a post.
 
-I also do not have to worry about **resolving** the **unique identifiers** for each post; my website **namespace** is unique (`https://koudyk.github.io/`), and the unique identifier of each post is just the URL root plus `posts/` plus the name of the blog-post folder (e.g., `2025-12-01_create-classification_cat-names`).
+I also do not have to worry about **resolving** the **unique identifiers** for each post; my website **namespace** is unique (`https://koudyk.github.io/`), and the unique identifier of each post is just the URL root plus `posts/` plus the name of the blog post folder (e.g., `2025-12-01_create-classification_cat-names`).
 
 ### Version history
 
@@ -93,16 +91,16 @@ I also do not have to worry about **resolving** the **unique identifiers** for e
 <!-- - I made a faceted classification system of 'positions', e.g.,
 ![](positions_faceted-classification.png) -->
 
-**Version 2: Dublin core for descriptive metadata of posts, post-secondary qualifications, and projects**
+**Version 2: Dublin Core for descriptive metadata of posts, post-secondary qualifications, and projects**
 
 - After reading about the **Dublin Core Abstract Model** in the book "Metadata" by Jeffrey Pomerantz, I decided to try to fit my website metadata into DCMI. I tried to use all of the Elements, Terms, Classes, and Syntax Encoding Schemes that could be relevant. The idea was that I would later simplify it.
 - I created content schemas for the descriptive metadata for Posts, Post-secondary qualifications, and Projects. Here's a screenshot of the first few items in the descriptive metadata for Posts.
 
 ![](DC-metadata_color-coded.png)
 
-**Version 3: Dublin core with implementation in XML snippets**
+**Version 3: Dublin Core with implementation in XML snippets**
 
-- I decided that each element needed a human-readable property name, so I re-did the schemas with that as the first column, and specified the Dublin Core properties at the right side of the table, along with what it would look like in XML. Also, instead of colour-coding the different types of properties in Dublin Core, I used the format `dc:date` and `dcterms:PeriodOfTime`. This is what it looked like for the descriptive metadata for qualifications:
+- I decided that each element needed a human-readable property name, so I redid the schemas with that as the first column, and specified the Dublin Core properties at the right side of the table, along with what it would look like in XML. Also, instead of color-coding the different types of properties in Dublin Core, I used the format `dc:date` and `dcterms:PeriodOfTime`. This is what it looked like for the descriptive metadata for qualifications:
 
 ![](qualification_descriptive-metadata.png)
 
@@ -110,13 +108,13 @@ I also do not have to worry about **resolving** the **unique identifiers** for e
 
 ![](posts_technical-metadata.png)
 
-**Version 4 (initial submission): Dublin core in a simplified table**
+**Version 4 (initial submission): Dublin Core in a simplified table**
 
-- I decided to remove the XML implementation snippets for my submission. I figured I might include that in the assignment where I was going to create integrated systems for this website. My initiall submission for the content-schema assignment looked like this:
+- I decided to remove the XML implementation snippets for my submission. I figured I might include that in the assignment where I was going to create integrated systems for this website. My initial submission for the content-schema assignment looked like this:
 
 ![](submitted_content-schema.webp)
 
 **Version 5 (final version for this post): Back to the website template's metadata schema for blog posts**
 
 - In the end, I decided to stick with the schema for blog posts that came with the website template. This is because I know that when coding in unfamiliar languages, it is best to start with incremental changes rather than re-designing the entire system from scratch.
-- This is the version that I included in my 'Create - Systems Integration' assignment. I received feedback that I might want to further differentiate between `Subject` and `Skill`. I think that made sense at that time because I did't have many skills listed. But I think the distinction will be more clear once I've added posts where I used different skills, such as Python, Git, academic writing, international collaboration, etc. I think that simply having more examples there will make the categories more distinct.
+- This is the version that I included in my 'Create - Systems Integration' assignment. I received feedback that I might want to further differentiate between `Subject` and `Skill`. I think that made sense at that time because I didn't have many skills listed. But I think the distinction will be more clear once I've added posts where I used different skills, such as Python, Git, academic writing, international collaboration, etc. I think that simply having more examples there will make the categories more distinct.
