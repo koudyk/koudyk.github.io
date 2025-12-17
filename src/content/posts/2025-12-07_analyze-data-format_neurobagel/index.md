@@ -1,7 +1,7 @@
 ---
 title: "Down the linked-data rabbit hole"
 published: 2025-12-07
-description: "Analyzing Neurobagel's data formats: TSV, JSON, and JSON-LD"
+description: "Analyzing data formats used by Neurobagel"
 image: 'spider_web.png'
 tags: [Data format, Linked data, RDF]
 skills: [Analyzing information systems, Information organization, TSV, JSON, JSON-LD]
@@ -10,7 +10,7 @@ draft: false
 lang: ''
 ---
 
-# Analyzing Neurobagel's data formats
+## Analyzing data formats used by Neurobagel
 
 I have discovered the deep, deep rabbit hole of linked data and the semantic web.
 Needless to say, I have had to resist researching it too much because I could probably do that for a year and not understand everything.

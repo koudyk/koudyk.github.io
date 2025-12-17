@@ -1,7 +1,7 @@
 ---
 title: "Making brains findable"
 published: 2025-12-08
-description: 'Analyzing the integrated systems in Neurobagel'
+description: 'Analyzing the systems integration in Neurobagel'
 image: 'brains.png'
 tags: [Systems integration, Controlled vocabulary, Data format, Content standard, Neurobagel]
 skills: [Analyzing information systems, Information organization, TSV, JSON, JSON-LD]
@@ -10,7 +10,7 @@ draft: false
 lang: ''
 ---
 
-## Analyzing the integrated systems in Neurobagel
+## Analyzing the systems integration in Neurobagel
 
 <!-- background and purpose in bulletpoints -->
 Before Neurobagel, there were online tools and databases for finding open neuroimaging (brain imaging) datasets.

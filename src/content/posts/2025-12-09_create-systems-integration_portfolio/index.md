@@ -20,7 +20,15 @@ I'm going to cite **user warrant** as a justification; I have just used the term
 
 ## The assignment
 
-<!-- assignment instructions -->
+The goal of this assignment was to think about how the various information systems we've learned about interact in a resource discovery tool.
+We had to choose a set of resources to organize, and think of the components of our system, including:
+
+- The data format
+- The content standard
+- One or more controlled vocabularies
+- One or more classifications
+
+We also had to explain how all these systems would work together, as well as what kind of labour and expertise would be required to use them.
 
 ## Description of the integrated systems
 
@@ -114,5 +122,6 @@ After trying to add the "Skills" tags, I realized that it is quite difficult to 
 Perhaps it would be easier to leave the "Categories" and "Tags" sections in the back-end, and just change how they are displayed on the front-end.
 I think that the simplest change (simple conceptually) would be to turn the list of tags into a **tag cloud**, such that the terms that have been used more often appear larger.
 This could make them more useful and less overwhelming to look through.
+So far, the best I have been able to do is sort them alphabetically and then by frequency, and to add the frequency (number of posts they're applied to) in square brackets before the tag name.
 
 At the recommendation of a TA for this course, I may add an additional date element to the metadata that is something like `Last updated`, since that will not always be the same as the `Published` date.

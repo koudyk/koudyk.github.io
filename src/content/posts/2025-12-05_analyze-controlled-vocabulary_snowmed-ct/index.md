@@ -1,7 +1,7 @@
 ---
 title: 'A tale of clinicians and infometricians'
 published: 2025-12-05
-description: 'Analyzing SNOMED-CT as a controlled vocabulary'
+description: 'Analyzing a controlled vocabulary: Systematized Nomenclature of Medicine – Clinical Terms (SNOMED-CT)'
 image: 'snomed-ct_custom-relationships_wide.png'
 tags: [Ontology, Controlled vocabulary, SNOMED-CT, Neurobagel]
 skills: [Analyzing information systems, Information organization]

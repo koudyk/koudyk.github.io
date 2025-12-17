@@ -1,7 +1,7 @@
 ---
 title: 'Do we need mental disorder classifications, or are symptoms enough?'
 published: 2025-12-04
-description: 'Analyzing the DSM-5 as a classification system'
+description: 'Analyzing a classification system: the Diagnostic and Statistical Manual (DSM)'
 image: 'depressed-girl-with-string-brain.png'
 tags: [Hierarchical classification, Controlled vocabulary, DSM]
 skills: [Analyzing information systems, Information organization]
@@ -11,9 +11,9 @@ lang: ''
 ---
 **TW**: I’m going to question the way we classify mental disorders; this may be upsetting to individuals with personal experience with mental disorders.
 
-## Analyzing the DSM-5 as a classification system
+## Analyzing a classification system: the Diagnostic and Statistical Manual (DSM)
 
-<!-- background and purpose in bulletpoints -->
+I’m coming to this assignment with the perspective that the DSM classification system is flawed and sometimes harmful. Based on my experience conducting neuroscience meta-research (research on research), I think one of the biggest problems is the simple assumption that these diagnostic labels are actual things that can be researched. It’s also probably helpful to share that my views have been shaped by my personal experiences in the Canadian mental health system.
 
 ## The assignment
 
@@ -21,13 +21,13 @@ lang: ''
 The goal of this assignment was to describe and analyze a classification system used in the real world.
 Rather than outline the minute workings of the classification system itself, the idea was to examine its cultural situation in terms of its creation and governance, and to summarize the main weaknesses and strengths of the system.
 
-I chose to foucs on the Diagnostic and Statistical Manual (DSM-5).
+I chose to foucs on the Diagnostic and Statistical Manual (DSM).
 
 ## Background of the DSM
 
 **What is it?** The DSM is a diagnostic manual that is used by clinicians to give individuals diagnoses of mental disorders.
 
-**What resources/concepts does it label and organize?** At its core, the DSM is a classification system of mental disorders. I want to emphasise that the *things* being classified by the DSM are mental disorders, not individuals. Of course, the importance of the DSM comes from the fact that it contains the labels given to people, and so I won’t ignore this fact. But with respect to individuals, the DSM is more like a thesaurus, because each individual can have multiple mental disorders (e.g., both Major Depressive Disorder and Generalized Anxiety Disorder; these would be called “co-morbid disorders”). In the DSM, it is the constellations of symptoms that distinguish mental disorders as separate classes (e.g., insomnia + low mood = depression, but insomnia + intense worry = anxiety).
+**What resources/concepts does it label and organize?** At its core, the DSM is a classification system of mental disorders. I want to emphasize that the *things* being classified by the DSM are mental disorders, not individuals. Of course, the importance of the DSM comes from the fact that it contains the labels given to people, and so I won’t ignore this fact. But with respect to individuals, the DSM is more like a thesaurus, because each individual can have multiple mental disorders (e.g., both Major Depressive Disorder and Generalized Anxiety Disorder; these would be called “co-morbid disorders”). In the DSM, it is the constellations of symptoms that distinguish mental disorders as separate classes (e.g., insomnia + low mood = depression, but insomnia + intense worry = anxiety).
 
 **Why is the system important?** This manual has many real-world impacts. The classification system impacts not only the lives of individuals with mental disorders, but also their social network, the institutions that (hopefully) support them, and the economy at large (e.g., through the costs of prevention, treatment, and missed work). As I’ll discuss later, it also impacts mental health research.
 
@@ -53,8 +53,6 @@ Since then, there have been multiple editions (DSM History, n.d.):
 - The APA Assembly and Board of Trustees gives final approval.
 
 ## Analysis of the DSM
-
-**My bias/stance.** I’m coming to this assignment with the perspective that the DSM classification system is flawed and sometimes harmful. Based on my experience conducting neuroscience meta-research (research on research), I think one of the biggest problems is the simple assumption that these diagnostic labels are actual things that can be researched. It’s also probably helpful to share that my views have been shaped by my personal experiences in the Canadian mental health system.
 
 **Strengths and obvious issues.** To explain what I mean when I say that mental disorder classes are not actual things, consider how the labels are given to people. On the one hand, classes overlap. For example, insomnia (trouble sleeping) is a symptom of both Major Depressive Disorder (MDD) and Generalized Anxiety Disorder (GAD). On the other hand, individual classes can contain a lot of variation. For example, one person with MDD might have insomnia and weight gain, and another person with MDD might have hypersomnia (excessive sleep) and weight loss. This is possibly more problematic when we consider that the former (insomnia and weight gain) is a constellation of symptoms with greater **typicality** in the diagnosis of Major Depressive Disorder. The seemingly-opposite constellation of hypersomnia and weight loss is given the same classification, even though it is very rare.
 

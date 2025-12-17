@@ -5,10 +5,12 @@ description: 'From scientist to information professional; there and maybe back a
 image: 'custom-transmogrifier.png'
 tags: [Faceted classification]
 skills: [Information organization,]
-category: Organizing well (LIBR509 course)
+category: Venting
 draft: false 
 lang: ''
 ---
+
+![](custom-transmogrifier.png)
 
 ## Week 3 of hopefully 112
 
