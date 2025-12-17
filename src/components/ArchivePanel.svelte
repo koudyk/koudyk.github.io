@@ -151,13 +151,21 @@ onMount(async () => {
                             {post.data.title}
                         </div>
 
-                        <!-- category -->
+                        <!-- description -->
                         <div
+                                class="hidden md:block md:w-[40%] text-left text-sm transition
+                     whitespace-nowrap overflow-ellipsis overflow-hidden text-30"
+                        >
+                            {post.data.description}
+                        </div>
+
+                        <!-- category -->
+                        <!-- <div
                                 class="hidden md:block md:w-[30%] text-left text-sm transition
                      whitespace-nowrap overflow-ellipsis overflow-hidden text-30"
                         >
                             {post.data.category}
-                        </div>
+                        </div> -->
                         
                         <!-- tag list -->
                         <!-- <div
