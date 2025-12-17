@@ -3,8 +3,8 @@ title: 'Self-organizing systems'
 published: 2025-12-09
 description: 'Creating integrated systems for my personal website'
 image: 'website-labelled-with-metadata-sources.png'
-tags: [Systems integration, Controlled vocabulary, Thesaurus, Data format, YAML, Content schema]
-skills: [Information organization,]
+tags: [Systems integration, Controlled vocabulary, Data format, Content standard, This website]
+skills: [Creating information systems, Information organization, Markdown, YAML, TypeScript, Web development]
 category: Organizing well (LIBR509 course)
 draft: false 
 lang: ''

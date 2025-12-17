@@ -3,8 +3,8 @@ title: "Down the linked-data rabbit hole"
 published: 2025-12-07
 description: "Analyzing Neurobagel's data formats: TSV, JSON, and JSON-LD"
 image: 'spider_web.png'
-tags: [Data format, CSV, JSON, Neurobagel, Neuroscience]
-skills: [Information organization,]
+tags: [Data format, Linked data, RDF]
+skills: [Analyzing information systems, Information organization, TSV, JSON, JSON-LD]
 category: Organizing well (LIBR509 course)
 draft: false 
 lang: ''

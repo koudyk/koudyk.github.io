@@ -3,8 +3,8 @@ title: "Why your cat doesn't know its name"
 published: 2025-12-01
 description: Creating a faceted classification system for cat names
 image: thistle-on-shoulders-at-desk.png
-tags: [Faceted classification, Controlled vocabularies ]
-skills: [Information organization, Data visualization]
+tags: [Faceted classification, Thistle the cat]
+skills: [Creating information systems, Information organization, Data visualization]
 category: Organizing well (LIBR509 course)
 draft: false 
 lang: eng

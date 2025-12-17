@@ -3,8 +3,8 @@ title: 'Do we need mental disorder classifications, or are symptoms enough?'
 published: 2025-12-04
 description: 'Analyzing the DSM-5 as a classification system'
 image: 'depressed-girl-with-string-brain.png'
-tags: []
-skills: [Information organization,]
+tags: [Hierarchical classification, Controlled vocabulary, DSM]
+skills: [Analyzing information systems, Information organization]
 category: Organizing well (LIBR509 course)
 draft: false 
 lang: ''

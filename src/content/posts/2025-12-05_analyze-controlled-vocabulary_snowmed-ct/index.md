@@ -3,8 +3,8 @@ title: 'A tale of clinicians and infometricians'
 published: 2025-12-05
 description: 'Analyzing SNOMED-CT as a controlled vocabulary'
 image: 'snomed-ct_custom-relationships_wide.png'
-tags: [Controlled vocabulary, Ontology, SNOMED-CT, Resource discovery tool, Neurobagel]
-skills: [Information organization,]
+tags: [Ontology, Controlled vocabulary, SNOMED-CT, Neurobagel]
+skills: [Analyzing information systems, Information organization]
 category: Organizing well (LIBR509 course)
 draft: false 
 lang: ''

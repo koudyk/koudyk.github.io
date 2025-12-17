@@ -3,8 +3,8 @@ title: 'Finding storytelling inspiration'
 published: 2025-12-02
 description: 'Creating a thesaurus for Pixar Shorts'
 image: 'pixar_lamp.png'
-tags: [Controlled vocabulary, Thesaurus, Pixar]
-skills: [Information organization, Data visualization]
+tags: [Thesaurus, Pixar Shorts, Controlled vocabulary]
+skills: [Creating information systems, Information organization, Data visualization]
 category: Organizing well (LIBR509 course)
 draft: false 
 lang: ''

@@ -3,8 +3,8 @@ title: "Making brains findable"
 published: 2025-12-08
 description: 'Analyzing the integrated systems in Neurobagel'
 image: 'brains.png'
-tags: [Systems integration]
-skills: [Information organization,]
+tags: [Systems integration, Controlled vocabulary, Data format, Content standard, Neurobagel]
+skills: [Analyzing information systems, Information organization, TSV, JSON, JSON-LD]
 category: Organizing well (LIBR509 course)
 draft: false 
 lang: ''
