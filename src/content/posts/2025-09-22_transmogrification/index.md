@@ -3,8 +3,8 @@ title: Transmogrification progress update
 published: 2025-09-22
 description: 'From scientist to information professional; there and maybe back again.'
 image: 'custom-transmogrifier.png'
-tags: [Faceted classification]
-skills: [Information organization,]
+tags: [Faceted classification, ]
+skills: [Information organization, Creative writing]
 category: Venting
 draft: false 
 lang: ''
