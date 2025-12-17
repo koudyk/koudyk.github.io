@@ -51,51 +51,143 @@ export type Tag = {
 	count: number;
 };
 
+// export async function getTagList(): Promise<Tag[]> {
+// 	const allBlogPosts = await getCollection<"posts">("posts", ({ data }) => {
+// 		return import.meta.env.PROD ? data.draft !== true : true;
+// 	});
+
+// 	const countMap: { [key: string]: number } = {};
+// 	allBlogPosts.forEach((post: { data: { tags: string[] } }) => {
+// 		post.data.tags.forEach((tag: string) => {
+// 			if (!countMap[tag]) countMap[tag] = 0;
+// 			countMap[tag]++;
+// 		});
+// 	});
+
+// 	// sort tags
+// 	const keys: string[] = Object.keys(countMap).sort((a, b) => {
+// 		return a.toLowerCase().localeCompare(b.toLowerCase());
+// 	});
+
+// 	return keys.map((key) => ({ name: key, count: countMap[key] }));
+// }
+
 export async function getTagList(): Promise<Tag[]> {
 	const allBlogPosts = await getCollection<"posts">("posts", ({ data }) => {
 		return import.meta.env.PROD ? data.draft !== true : true;
 	});
 
-	const countMap: { [key: string]: number } = {};
+	const countMap: Record<string, number> = {};
+
 	allBlogPosts.forEach((post: { data: { tags: string[] } }) => {
 		post.data.tags.forEach((tag: string) => {
-			if (!countMap[tag]) countMap[tag] = 0;
-			countMap[tag]++;
+			countMap[tag] = (countMap[tag] ?? 0) + 1;
 		});
 	});
 
-	// sort tags
-	const keys: string[] = Object.keys(countMap).sort((a, b) => {
-		return a.toLowerCase().localeCompare(b.toLowerCase());
+	// 1) Alphabetical sort by raw tag name
+	const sortedTags = Object.keys(countMap).sort((a, b) =>
+		a.toLowerCase().localeCompare(b.toLowerCase())
+	);
+
+	// 2) Add count-prefixed display name
+	const tagsWithCounts = sortedTags.map((tag) => {
+		const count = countMap[tag];
+		return {
+			tag,
+			count,
+			displayName: `[${count}] ${tag}`,
+		};
 	});
 
-	return keys.map((key) => ({ name: key, count: countMap[key] }));
+	// 3) Sort again so most-used tags appear first
+	tagsWithCounts.sort((a, b) => {
+		// primary: descending count
+		if (b.count !== a.count) {
+			return b.count - a.count;
+		}
+		// secondary: alphabetical (already sorted, but explicit is safer)
+		return a.tag.toLowerCase().localeCompare(b.tag.toLowerCase());
+	});
+
+	return tagsWithCounts.map(({ tag, count, displayName }) => ({
+		name: tag,
+		tag: tag,
+		count,
+	}));
 }
+
 
 export type Skill = {
 	name: string;
 	count: number;
 };
 
+// export async function getSkillList(): Promise<Skill[]> {
+// 	const allBlogPosts = await getCollection<"posts">("posts", ({ data }) => {
+// 		return import.meta.env.PROD ? data.draft !== true : true;
+// 	});
+
+// 	const countMap: { [key: string]: number } = {};
+// 	allBlogPosts.forEach((post: { data: { skills: string[] } }) => {
+// 		post.data.skills.forEach((skill: string) => {
+// 			if (!countMap[skill]) countMap[skill] = 0;
+// 			countMap[skill]++;
+// 		});
+// 	});
+
+// 	// sort skills
+// 	const keys: string[] = Object.keys(countMap).sort((a, b) => {
+// 		return a.toLowerCase().localeCompare(b.toLowerCase());
+// 	});
+
+// 	return keys.map((key) => ({ name: key, count: countMap[key] }));
+// }
+
+
 export async function getSkillList(): Promise<Skill[]> {
 	const allBlogPosts = await getCollection<"posts">("posts", ({ data }) => {
 		return import.meta.env.PROD ? data.draft !== true : true;
 	});
 
-	const countMap: { [key: string]: number } = {};
+	const countMap: Record<string, number> = {};
+
 	allBlogPosts.forEach((post: { data: { skills: string[] } }) => {
 		post.data.skills.forEach((skill: string) => {
-			if (!countMap[skill]) countMap[skill] = 0;
-			countMap[skill]++;
+			countMap[skill] = (countMap[skill] ?? 0) + 1;
 		});
 	});
 
-	// sort skills
-	const keys: string[] = Object.keys(countMap).sort((a, b) => {
-		return a.toLowerCase().localeCompare(b.toLowerCase());
+	// 1) Alphabetical sort by raw skill name
+	const sortedSkills = Object.keys(countMap).sort((a, b) =>
+		a.toLowerCase().localeCompare(b.toLowerCase())
+	);
+
+	// 2) Add count-prefixed display name
+	const skillsWithCounts = sortedSkills.map((skill) => {
+		const count = countMap[skill];
+		return {
+			skill,
+			count,
+			displayName: `[${count}] ${skill}`,
+		};
 	});
 
-	return keys.map((key) => ({ name: key, count: countMap[key] }));
+	// 3) Sort again so most-used skills appear first
+	skillsWithCounts.sort((a, b) => {
+		// primary: descending count
+		if (b.count !== a.count) {
+			return b.count - a.count;
+		}
+		// secondary: alphabetical (already sorted, but explicit is safer)
+		return a.skill.toLowerCase().localeCompare(b.skill.toLowerCase());
+	});
+
+	return skillsWithCounts.map(({ skill, count, displayName }) => ({
+		name: displayName,
+		originalSkill: skill,
+		count,
+	}));
 }
 
 export type Category = {
