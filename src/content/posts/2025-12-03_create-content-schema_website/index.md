@@ -17,7 +17,7 @@ Two birds with one stone, right?
 
 Well, it would have been more efficient if I had not gone down the rabbit hole of the **Dublin Core Abstract Model** and its implementation in **XML**.
 I didn't end up using either in the end.
-I blame Jeffrey Pomerantz for making these topics too interesting in his book "Metadata" (which I highly recommend).
+I blame Jeffrey Pomerantz for making these topics too interesting in his book "Metadata" (which I highly recommend; Pomerantz, 2015).
 
 ## The assignment
 
@@ -40,6 +40,10 @@ I expanded this in several ways:
 ## My content schema
 
 ![](finalized_content-schema.png)
+
+## References
+
+Pomerantz, J. (2015). *Metadata*. MIT Press.
 
 ## Commentary
 
