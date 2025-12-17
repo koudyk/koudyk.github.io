@@ -1,8 +1,8 @@
 ---
-title: 'More meta: A Content Schema for this website'
+title: 'Keep it simple, silly'
 published: 2025-12-03
 description: 'Creating a content schema for my personal website'
-image: 'screenshot-of-screenshot-of-website.png'
+image: 'exploding-strings.png'
 tags: [Content schema, Data format, Dublin Core, This website]
 skills: [Creating information systems, Web development, XML, YAML, Markdown]
 category: Organizing well (LIBR509 course)
