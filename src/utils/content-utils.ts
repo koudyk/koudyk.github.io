@@ -184,7 +184,7 @@ export async function getSkillList(): Promise<Skill[]> {
 	});
 
 	return skillsWithCounts.map(({ skill, count, displayName }) => ({
-		name: displayName,
+		name: skill,
 		originalSkill: skill,
 		count,
 	}));

@@ -22,9 +22,10 @@ const style = Astro.props.style;
 ---
 <WidgetLayout name={i18n(I18nKey.skills)} id="skills" isCollapsed={isCollapsed} collapsedHeight={COLLAPSED_HEIGHT} class={className} style={style}>
     <div class="flex gap-2 flex-wrap">
-        {skills.map(t => (
-            <ButtonSkill href={getSkillUrl(t.name)} label={`View all posts with the ${t.name.trim()} skill`}>
-                {t.name.trim()}
+        {skills.map(s => (
+            <ButtonSkill href={getSkillUrl(s.name)} label={`View all posts with the ${s.name.trim()} skill`}>
+                {/* {s.name.trim()} */}
+                {"[" + s.count + "] " + s.name.trim()}
             </ButtonSkill>
         ))}
     </div>
