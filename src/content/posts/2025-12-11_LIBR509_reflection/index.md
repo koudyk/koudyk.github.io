@@ -100,7 +100,7 @@ Thus, being able to say that they did a meta-analysis on 50 papers in their abst
 During my PhD, I thought that the solution would be to have tables with structured data that are both human- and machine-readable about each article.
 But after doing this course, I wonder if one could use linked data to communicate this information in natural text, the way that researchers are used to consuming each other’s work, but have the data systematically stored in the back end using linked data.
 
-### Arguments for using user generated tags rather than controlled vocabularies
+### Arguments for using user-generated tags rather than controlled vocabularies
 
 For this course, I read the textbook called “Metadata” by Jeffrey Pomerantz (2015), and through looking at his sources, I found a fascinating blog post by Clay Shirky (2005) called "Ontology is Overrated -- Categories, Links, and Tags" .
 It is about how, with the internet and the ability to link things directly, we may not need to hold on to certain systems of organizing information like classification and controlled vocabularies.
