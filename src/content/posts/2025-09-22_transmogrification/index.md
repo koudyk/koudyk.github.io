@@ -5,7 +5,7 @@ description: 'From scientist to information professional; there and maybe back a
 image: 'custom-transmogrifier.png'
 tags: [Faceted classification]
 skills: [Information organization, Creative writing]
-category: Venting
+category: Reflection
 draft: false 
 lang: ''
 ---
