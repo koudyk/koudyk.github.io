@@ -6,7 +6,7 @@ image: 'custom-transmogrifier.png'
 tags: []
 skills: [Information organization,]
 category: Organizing well (LIBR509 course)
-draft: false
+draft: true
 lang: ''
 ---
 
@@ -62,7 +62,7 @@ I gave myself my grade based on (a) my mastery of the course topics (as assessed
 **Regarding mastery**, I was in the top or second-top category for most of the mastery components in the survey.
 The only exception is FRBR, which I felt I understood when working with it in class, but I don't feel that I could explain it on demand now without looking back at my notes.
 
-**Regarding performance**, I have evaluated myself against a rubric that I created several weeks ago. 
+**Regarding performance**, I have evaluated myself against a rubric that I created several weeks ago.
 It is a combination of the collaborative schemes made for this class this year and last year; this is in the first figure below.
 Based on my rubric, I set goals for the assignments and peer reviews, and tracked my progress against those goals in the spreadsheets shown in the lower two figures.
 
